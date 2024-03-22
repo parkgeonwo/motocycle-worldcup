@@ -88,6 +88,17 @@ function startRound(startMotorcycles) {
   const selection = startMotorcycles.splice(0, 2);
   currentRound = selection;
 
+  const currentRoundInfo = document.getElementById('current-round-info');
+  if(startMotorcycles.length == 0){
+    currentRoundInfo.innerHTML = '결승';
+  } else if(startMotorcycles.length <= 2){
+    currentRoundInfo.innerHTML = '준결승';
+  } else if(startMotorcycles.length <= 6){
+    currentRoundInfo.innerHTML = '8강';
+  } else if(startMotorcycles.length <= 16){
+    currentRoundInfo.innerHTML = '16강';
+  } 
+
   selection.forEach(motorcycle => {
     const div = document.createElement('div');
     div.classList.add('motorcycle');
@@ -98,11 +109,13 @@ function startRound(startMotorcycles) {
 }
 
 function selectMotorcycle(selected, startMotorcycles) {
+
   currentRound.forEach(motorcycle => {
     if (motorcycle.name === selected.name) {
       startMotorcycles.push(selected); // 선택된 모터사이클을 다음 라운드에 추가
     }
   });
+
 
   startRound(startMotorcycles); // 다음 라운드 시작
 }
@@ -123,6 +136,14 @@ function showFinalResult(result) {
   resultContainer.style.display = 'flex';
   resultContainer.style.flexDirection = 'column';
   // onclick="location.href='./index.html'"
+
+  // 16강, 8강, 준결승 텍스트 없애기
+  const currentRoundInfo = document.getElementById('current-round-info');
+  currentRoundInfo.innerHTML = '';
+  // br 없애기
+  const br = document.getElementById('br');
+  br.style.display = 'none';
+
 
   const motorcycleContainer = document.getElementById('motorcycleContainer');
   motorcycleContainer.style.display = 'none';
