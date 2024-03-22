@@ -114,7 +114,7 @@ function showFinalResult(result) {
   console.log(finalMotorcycle);
   resultContainer.innerHTML = `
     <div>당신이 고른 1등은</div>
-    <img src="${finalMotorcycle.image}" alt="${finalMotorcycle.name}">
+    <img class="final-img" src="${finalMotorcycle.image}" alt="${finalMotorcycle.name}">
     <div>${finalMotorcycle.brand}</div>
     <div>${finalMotorcycle.name}</div>
     <button onclick="window.open('${finalMotorcycle.url}')" >내가 고른 바이크의 가격은 얼마일까?</button>
@@ -164,19 +164,19 @@ window.onload = function() {
 
   const currentUrl = window.location.href;
   const currentFileName = getFileName(currentUrl);
-  if(currentFileName === '125cc'){
+  if(currentFileName.includes('125cc')){
     shuffleArray(motorcycles_125cc); // 후보 목록을 랜덤으로 섞습니다.
     const selectedMotorcycles = motorcycles_125cc.slice(0, 16); // 상위 16개를 선택합니다.
     startRound(selectedMotorcycles); // 선택된 16개로 이상형 월드컵 시작
-  }  else if(currentFileName === 'quarter.html'){
+  }  else if(currentFileName.includes('quarter')){
     shuffleArray(motorcycles_quarter); // 후보 목록을 랜덤으로 섞습니다.
     const selectedMotorcycles = motorcycles_quarter.slice(0, 16); // 상위 16개를 선택합니다.
     startRound(selectedMotorcycles); // 선택된 16개로 이상형 월드컵 시작
-  } else if(currentFileName === 'middle.html'){
+  } else if(currentFileName.includes('middle')){
     shuffleArray(motorcycles_middle); // 후보 목록을 랜덤으로 섞습니다.
     const selectedMotorcycles = motorcycles_middle.slice(0, 16); // 상위 16개를 선택합니다.
     startRound(selectedMotorcycles); // 선택된 16개로 이상형 월드컵 시작
-  } else if(currentFileName === 'dream.html'){
+  } else if(currentFileName.includes('dream')){
     shuffleArray(motorcycles_dream); // 후보 목록을 랜덤으로 섞습니다.
     const selectedMotorcycles = motorcycles_dream.slice(0, 16); // 상위 16개를 선택합니다.
     startRound(selectedMotorcycles); // 선택된 16개로 이상형 월드컵 시작
