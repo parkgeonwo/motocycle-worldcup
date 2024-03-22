@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모터사이클 이상형 월드컵 | 미들급</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; padding: 20px; text-align: center; }
+    .container { display: none; justify-content: center; margin-top: 20px; }
+    .motorcycle { display: inline-block; margin: 0 10px; cursor: pointer; width: calc( 50% - 20px ); }
+    .motorcycle img {
+      width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px;
+      aspect-ratio: 1 / 1;  /* 100, 33.333 */
+    }
+    .selected { transform: translateY(-50px); transition: transform 0.5s ease; }
+    #result { display: none; }
+    button { margin-top: 10px; }
+    .main-back{ width: 100%; max-width: 800px; margin:0 auto; }
+    .page-title-div{
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 480px) {
+    /* 화면 너비가 480px일 때  */
+      .container{
+      display:flex; flex-direction: column;
+      }
+      .motorcycle{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 16px;
+      }
+      .motorcycle img {
+        width: 85%;
+      }
+    }
+  </style>
+</head>
+  <body>
+    <div class="main-back">
+      <div class="page-title-div" onclick="location.href='./index.html'">바이크 이상형 월드컵</div>
+      <br/>
+      <div id="choice-info-text">자 골라골라</div>
+      <div id="motorcycleContainer" class="container"></div>
+      <div id="result" class="container"></div>
+    </div>
+
+
+  <script src="./model_file.js"></script>
+
+
+  </body>
+</html>
