@@ -164,7 +164,7 @@ window.onload = function() {
 
   const currentUrl = window.location.href;
   const currentFileName = getFileName(currentUrl);
-  if(currentFileName === '125cc.html'){
+  if(currentFileName === '125cc'){
     shuffleArray(motorcycles_125cc); // 후보 목록을 랜덤으로 섞습니다.
     const selectedMotorcycles = motorcycles_125cc.slice(0, 16); // 상위 16개를 선택합니다.
     startRound(selectedMotorcycles); // 선택된 16개로 이상형 월드컵 시작
