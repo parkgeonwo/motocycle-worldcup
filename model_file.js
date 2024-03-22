@@ -132,6 +132,7 @@ function showFinalResult(result) {
     <div>${finalMotorcycle.name}</div>
     <button onclick="window.open('${finalMotorcycle.url}')" >내가 고른 바이크의 가격은 얼마일까?</button>
     <button onclick="location.href='./index.html'" >다른 배기량 월드컵도 해보자!</button>
+    <button onclick="window.open('./index.html')" >다른 배기량 월드컵도 해보자!</button>
     <button id="copyUrlBtn">친구한테 공유하기!</button>`;
   resultContainer.style.display = 'flex';
   resultContainer.style.flexDirection = 'column';
