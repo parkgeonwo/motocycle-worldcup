@@ -1,28 +1,37 @@
 
 const motorcycles_125cc = [
   { name: "Z 125", brand:"가와사키", image: "./img/125cc/125-가와사키-z125.png", url: "https://www.reitwagen.co.kr/d" },
+  { name: "V125", brand:"람브레타", image: "./img/125cc/125-람브레타-v125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "힙스터 125", brand:"몬디알", image: "./img/125cc/125-몬디알-힙스터125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "스프린트 125", brand:"베스파", image: "./img/125cc/125-베스파-스프린트125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "GTS 125", brand:"베스파", image: "./img/125cc/125-베스파-gts125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "크롬웰 125", brand:"브릭스톤", image: "./img/125cc/125-브릭스톤-크롬웰125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "펠스버그 125", brand:"브릭스톤", image: "./img/125cc/125-브릭스톤-펠스버그125.png", url: "https://www.reitwagen.co.kr/d" },
+  { name: "니키 125", brand:"빅토리아", image: "./img/125cc/125-빅토리아-니키125.png", url: "https://www.reitwagen.co.kr/d" },
+  { name: "비키 125", brand:"빅토리아", image: "./img/125cc/125-빅토리아-비키125.png", url: "https://www.reitwagen.co.kr/d" },
+  { name: "버그만 125", brand:"스즈키", image: "./img/125cc/125-스즈키-버그만125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "GSX R 125", brand:"스즈키", image: "./img/125cc/125-스즈키-gsxr125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "GSX S 125", brand:"스즈키", image: "./img/125cc/125-스즈키-gsxs125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "NMAX 125", brand:"야마하", image: "./img/125cc/125-야마하-nmax125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "TRICITY 125", brand:"야마하", image: "./img/125cc/125-야마하-tricity125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "G1", brand:"존테스", image: "./img/125cc/125-존테스-g1.png", url: "https://www.reitwagen.co.kr/d" },
+  { name: "U1", brand:"존테스", image: "./img/125cc/125-존테스-u1.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "스바르트필렌 125", brand:"허스크바나", image: "./img/125cc/125-허스크바나-스필125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "몽키 125", brand:"혼다", image: "./img/125cc/125-혼다-몽키125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "슈퍼커브", brand:"혼다", image: "./img/125cc/125-혼다-슈퍼커브.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "헌터커브", brand:"혼다", image: "./img/125cc/125-혼다-헌터커브.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "CB 125 R", brand:"혼다", image: "./img/125cc/125-혼다-cb125r.png", url: "https://www.reitwagen.co.kr/d" },
-  { name: "CBR 125", brand:"혼다", image: "./img/125cc/125-혼다-cbr125.png", url: "https://www.reitwagen.co.kr/d" },
+  { name: "CBR 125 R", brand:"혼다", image: "./img/125cc/125-혼다-cbr125r.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "MSX 125", brand:"혼다", image: "./img/125cc/125-혼다-msx125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "PCX 125", brand:"혼다", image: "./img/125cc/125-혼다-pcx125.png", url: "https://www.reitwagen.co.kr/d" },
+  { name: "모데나 125", brand:"AJS", image: "./img/125cc/125-ajs-모데나.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "캐드웰 125", brand:"AJS", image: "./img/125cc/125-ajs-캐드웰125.png", url: "https://www.reitwagen.co.kr/d" },
+  { name: "시티", brand:"DNA 모터스", image: "./img/125cc/125-dna모터스-시티.png", url: "https://www.reitwagen.co.kr/d" },
+  { name: "UHR 125", brand:"DNA 모터스", image: "./img/125cc/125-dna모터스-uhr125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "아퀼라 125", brand:"KR 모터스", image: "./img/125cc/125-kr모터스-아퀼라125.png", url: "https://www.reitwagen.co.kr/d" },
   { name: "DUKE 125", brand:"KTM", image: "./img/125cc/125-ktm-duke125.png", url: "https://www.reitwagen.co.kr/d" },
   // 모터사이클 모델 정보를 추가
+  //   { name: "", brand:"", image: "", url: "https://www.reitwagen.co.kr/d" },
 
 ];
 const motorcycles_quarter = [
@@ -130,12 +139,12 @@ function showFinalResult(result) {
     <img class="final-img" src="${finalMotorcycle.image}" alt="${finalMotorcycle.name}">
     <div>${finalMotorcycle.brand}</div>
     <div>${finalMotorcycle.name}</div>
-    <button onclick="window.open('${finalMotorcycle.url}')" >내가 고른 바이크의 가격은 얼마일까?</button>
-    <button onclick="window.open('./index.html')" >다른 배기량 월드컵도 해보자!</button>
+    <button onclick="location.href='index.html'" >다른 배기량 월드컵도 해보자!</button>
     <button id="copyUrlBtn">친구한테 공유하기!</button>`;
   resultContainer.style.display = 'flex';
   resultContainer.style.flexDirection = 'column';
   // onclick="location.href='./index.html'"
+  // <button onclick="window.open('${finalMotorcycle.url}')" >내가 고른 바이크의 가격은 얼마일까?</button>
 
   // 16강, 8강, 준결승 텍스트 없애기
   const currentRoundInfo = document.getElementById('current-round-info');
